@@ -10,15 +10,17 @@ import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
   hero: {
-    position: "static",
-    backgroundImage:
-      "url(https://static.vecteezy.com/system/resources/previews/001/072/376/original/network-connections-on-white-background-vector.jpg)",
+    // position: "relative",
+    backgroundImage: 
+    "url(https://static.vecteezy.com/system/resources/previews/001/072/376/original/network-connections-on-white-background-vector.jpg)",
+    // "url(https://images.pexels.com/photos/7076610/pexels-photo-7076610.jpeg?cs=srgb&dl=pexels-elīna-arāja-7076610.jpg&fm=jpg)",
     backgroundSize: "cover",
-    // backgroundPosition: 'center',
+    // backgroundPosition: "center",
+    height: 100 + 'vh'
   },
 
   container: {
-    height: 700,
+    height: 70 + 'vh',
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
@@ -80,21 +82,28 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container}>
-        <Title className={classes.title}>Garuda Resource Planning</Title>
+        <Title className={classes.title}>
+         Garuda Resource Planning
+        </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Asset Management System for your Company
+         Assets Management System for you Company
         </Text>
 
-        <Link href={"../app/login"}>
-          <Button
-            size="xl"
-            radius="xl"
-            className={classes.control}
-            color={"gray"}
-          >
-            Get started
-          </Button>
-        </Link>
+<Link href={"../app/login_page"}>
+<Button
+        
+        // variant="gradient"
+        size="xl"
+        radius="xl"
+        className={classes.control}
+        color="gray"
+        
+      >
+        Get started
+      </Button>
+
+</Link>
+   
       </Container>
     </div>
   );
