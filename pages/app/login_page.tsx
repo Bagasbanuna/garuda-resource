@@ -3,6 +3,7 @@ import { TextInput, Text, Paper, Stack, Input, Button } from "@mantine/core";
 import { useState } from "react";
 import MyButton from "../../component/button";
 import { title } from "process";
+import Link from "next/link";
 
 function PageLogin() {
   const [email, setEmail] = useState<string>();
@@ -20,7 +21,7 @@ function PageLogin() {
               setEmail(e.target.value);
             }}
           />
-          {email}
+          {/* {email} */}
 
           <TextInput
             label={"Password"}
@@ -30,7 +31,7 @@ function PageLogin() {
               setPassword(e.target.value);
             }}
           />
-          {password}
+          {/* {password} */}
           <Button
             onClick={(e: any) => {
               const body = {
@@ -53,10 +54,10 @@ function PageLogin() {
           >
             Klik
           </Button>
-
-          <MyButton 
-          
-           />
+          <Link href={"./regist"}>
+          <Button>Register</Button>
+          </Link>
+         
         </Stack>
       </Paper>
     </>
