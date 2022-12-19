@@ -11,10 +11,13 @@ if (req.method == "POST"){
     // res.status(201).json(body)
     const regist = await prisma.user.create({
         data: {
+            nama: body.nama,
             email: body.email,
             password: body.password
         }
     })
+    res.status(201).json(body)
+    console.log(body, "Success")
 }
 
 }
